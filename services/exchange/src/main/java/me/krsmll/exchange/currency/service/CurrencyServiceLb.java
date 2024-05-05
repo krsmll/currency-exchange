@@ -1,15 +1,10 @@
 package me.krsmll.exchange.currency.service;
 
-import client.LbWebClient;
-import dto.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 import java.util.Objects;
-import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
-import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
-import me.krsmll.exchange.currency.mapper.CurrencyMapper;
-import me.krsmll.exchange.currency.repository.CurrencyRepository;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.util.Pair;
@@ -17,6 +12,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ResponseStatusException;
+
+import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
+import me.krsmll.exchange.currency.dto.CurrencyListResponse;
+import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
+import me.krsmll.exchange.currency.mapper.CurrencyMapper;
+import me.krsmll.exchange.currency.repository.CurrencyRepository;
+import me.krsmll.libs.lb.client.LbWebClient;
+import me.krsmll.libs.lb.dto.LbCurrencyDto;
+import me.krsmll.libs.lb.dto.LbCurrencyExchangeRateDto;
+import me.krsmll.libs.lb.dto.LbCurrencyExchangeRatesDto;
 
 @Service
 @ConditionalOnProperty(value = "currency.provider", havingValue = "lb")
@@ -35,6 +40,12 @@ public class CurrencyServiceLb implements CurrencyService {
         this.lbWebClient = new LbWebClient(lbWebClient);
         this.currencyRepository = currencyRepository;
         this.currencyMapper = currencyMapper;
+    }
+
+    @Override
+    public CurrencyListResponse getCurrencies() {
+        List<CurrencyRateAgainstEuro> currencies = currencyRepository.findAll();
+        return currencyMapper.toCurrencyListResponse(currencies);
     }
 
     @Override

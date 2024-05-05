@@ -1,9 +1,10 @@
-package client;
+package me.krsmll.libs.lb.client;
 
-import dto.LbCurrencyDataDto;
-import dto.LbCurrencyExchangeDataDto;
 import org.springframework.web.reactive.function.client.WebClient;
-import util.XmlUtil;
+
+import me.krsmll.libs.lb.dto.LbCurrencyDataDto;
+import me.krsmll.libs.lb.dto.LbCurrencyExchangeDataDto;
+import me.krsmll.libs.lb.util.XmlUtil;
 
 public class LbWebClient {
     private static final String EXCHANGE_RATE_ENDPOINT = "/webservices/FxRates/FxRates.asmx/getCurrentFxRates";

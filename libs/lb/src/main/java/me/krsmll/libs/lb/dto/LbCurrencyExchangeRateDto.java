@@ -1,7 +1,8 @@
-package dto;
+package me.krsmll.libs.lb.dto;
 
 import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlElement;
+
 import lombok.Data;
 
 @Data

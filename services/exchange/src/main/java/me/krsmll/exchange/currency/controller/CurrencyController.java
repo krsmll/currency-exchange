@@ -2,24 +2,36 @@ package me.krsmll.exchange.currency.controller;
 
 import java.math.BigDecimal;
 import java.util.Optional;
-import lombok.RequiredArgsConstructor;
-import me.krsmll.exchange.currency.controller.spec.CurrencyControllerSpec;
-import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
-import me.krsmll.exchange.currency.service.CurrencyService;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import me.krsmll.exchange.currency.controller.spec.CurrencyControllerSpec;
+import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
+import me.krsmll.exchange.currency.dto.CurrencyListResponse;
+import me.krsmll.exchange.currency.service.CurrencyService;
+
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/currency")
+@RequestMapping("/currencies")
 public class CurrencyController implements CurrencyControllerSpec {
     private final Optional<CurrencyService> currencyService;
 
     @Override
+    @GetMapping
+    public ResponseEntity<CurrencyListResponse> getCurrencies() {
+        CurrencyService service = currencyService.orElseThrow(() ->
+                new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Currency provider is not configured"));
+        return ResponseEntity.ok(service.getCurrencies());
+    }
+
+    @Override
     @GetMapping("/exchange")
-    public ResponseEntity<CurrencyConversionResultResponse> getLatestCurrencyExchangeRates(
+    public ResponseEntity<CurrencyConversionResultResponse> convert(
             @RequestParam(name = "from") String fromCurrencyCode,
             @RequestParam(name = "to") String toCurrencyCode,
             @RequestParam(name = "amount") BigDecimal amount) {

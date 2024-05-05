@@ -27,6 +27,9 @@
                             <style>PALANTIR</style>
                             <formatJavadoc>false</formatJavadoc>
                         </palantirJavaFormat>
+                        <importOrder>
+                            <order>java|javax,org,com,me.krsmll,,\#me.krsmll,\#</order>
+                        </importOrder>
                     </java>
                 </configuration>
             </plugin>

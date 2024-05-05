@@ -1,15 +1,20 @@
 package me.krsmll.exchange.currency.mapper;
 
-import dto.LbCurrencyDto;
-import dto.LbCurrencyExchangeRateDto;
 import java.math.BigDecimal;
-import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
-import me.krsmll.exchange.currency.dto.CurrencyDto;
-import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
+
+import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
+import me.krsmll.exchange.currency.dto.CurrencyDto;
+import me.krsmll.exchange.currency.dto.CurrencyListResponse;
+import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
+import me.krsmll.libs.lb.dto.LbCurrencyDto;
+import me.krsmll.libs.lb.dto.LbCurrencyExchangeRateDto;
 
 @Component
 public class CurrencyMapper {
@@ -37,5 +42,10 @@ public class CurrencyMapper {
 
         return new CurrencyRateAgainstEuro(
                 null, currency.getCode(), englishName, rate.getRate(), currency.getCurrencyMinorUnits(), null, null);
+    }
+
+    public CurrencyListResponse toCurrencyListResponse(List<CurrencyRateAgainstEuro> currencies) {
+        return new CurrencyListResponse(
+                currencies.stream().map(this::toCurrencyDto).collect(Collectors.toList()));
     }
 }

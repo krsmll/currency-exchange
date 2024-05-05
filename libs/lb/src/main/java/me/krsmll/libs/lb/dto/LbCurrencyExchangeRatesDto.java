@@ -1,7 +1,8 @@
-package dto;
+package me.krsmll.libs.lb.dto;
 
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
+
 import lombok.Setter;
 
 @Setter
