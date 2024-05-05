@@ -8,5 +8,4 @@ public record CurrencyConversionResultResponse(
         BigDecimal rate,
         Integer minorUnits,
         BigDecimal originalAmount,
-        BigDecimal convertedAmount
-) {}
+        BigDecimal convertedAmount) {}

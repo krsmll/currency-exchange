@@ -2,6 +2,10 @@ package me.krsmll.exchange.currency.service;
 
 import client.LbWebClient;
 import dto.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.List;
+import java.util.Objects;
 import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
 import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
 import me.krsmll.exchange.currency.mapper.CurrencyMapper;
@@ -14,12 +18,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.List;
-import java.util.Objects;
-
-
 @Service
 @ConditionalOnProperty(value = "currency.provider", havingValue = "lb")
 public class CurrencyServiceLb implements CurrencyService {
@@ -30,7 +28,10 @@ public class CurrencyServiceLb implements CurrencyService {
     private final CurrencyRepository currencyRepository;
     private final CurrencyMapper currencyMapper;
 
-    public CurrencyServiceLb(@Qualifier("LbWebClient") WebClient lbWebClient, CurrencyRepository currencyRepository, CurrencyMapper currencyMapper) {
+    public CurrencyServiceLb(
+            @Qualifier("LbWebClient") WebClient lbWebClient,
+            CurrencyRepository currencyRepository,
+            CurrencyMapper currencyMapper) {
         this.lbWebClient = new LbWebClient(lbWebClient);
         this.currencyRepository = currencyRepository;
         this.currencyMapper = currencyMapper;
@@ -48,8 +49,7 @@ public class CurrencyServiceLb implements CurrencyService {
                 conversionRate,
                 toCurrency.getMinorUnits(),
                 amount,
-                amount.multiply(conversionRate).setScale(toCurrency.getMinorUnits(), RoundingMode.HALF_EVEN)
-        );
+                amount.multiply(conversionRate).setScale(toCurrency.getMinorUnits(), RoundingMode.HALF_EVEN));
     }
 
     @Override
@@ -67,22 +67,25 @@ public class CurrencyServiceLb implements CurrencyService {
     }
 
     private CurrencyRateAgainstEuro findCurrencyByCode(String currencyCode) {
-        return currencyRepository.findByCurrencyCodeIgnoreCase(currencyCode)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, String.format("Currency with code %s not found", currencyCode)));
+        return currencyRepository
+                .findByCurrencyCodeIgnoreCase(currencyCode)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.BAD_REQUEST, String.format("Currency with code %s not found", currencyCode)));
     }
 
-    private BigDecimal calculateConversionRate(CurrencyRateAgainstEuro fromCurrency, CurrencyRateAgainstEuro toCurrency) {
+    private BigDecimal calculateConversionRate(
+            CurrencyRateAgainstEuro fromCurrency, CurrencyRateAgainstEuro toCurrency) {
         return toCurrency.getRate().divide(fromCurrency.getRate(), MAX_SOURCE_PRECISION, RoundingMode.HALF_EVEN);
     }
 
     private List<Pair<LbCurrencyDto, LbCurrencyExchangeRateDto>> getCurrenciesWithRates() {
         List<LbCurrencyDto> currencies = lbWebClient.getCurrencyData().getCurrencies();
-        List<LbCurrencyExchangeRateDto> rates = lbWebClient.getLatestExchangeRates(EXCHANGE_RATE_TYPE).getExchangeRates()
-                .stream()
-                .map(LbCurrencyExchangeRatesDto::getRates)
-                .flatMap(List::stream)
-                .distinct()
-                .toList();
+        List<LbCurrencyExchangeRateDto> rates =
+                lbWebClient.getLatestExchangeRates(EXCHANGE_RATE_TYPE).getExchangeRates().stream()
+                        .map(LbCurrencyExchangeRatesDto::getRates)
+                        .flatMap(List::stream)
+                        .distinct()
+                        .toList();
 
         return currencies.stream()
                 .map(currency -> pairCurrencyWithMatchingRate(currency, rates))
@@ -90,7 +93,8 @@ public class CurrencyServiceLb implements CurrencyService {
                 .toList();
     }
 
-    private Pair<LbCurrencyDto, LbCurrencyExchangeRateDto> pairCurrencyWithMatchingRate(LbCurrencyDto currency, List<LbCurrencyExchangeRateDto> rates) {
+    private Pair<LbCurrencyDto, LbCurrencyExchangeRateDto> pairCurrencyWithMatchingRate(
+            LbCurrencyDto currency, List<LbCurrencyExchangeRateDto> rates) {
         return rates.stream()
                 .filter(rate -> rate.getCode().equals(currency.getCode()))
                 .findFirst()
@@ -98,7 +102,8 @@ public class CurrencyServiceLb implements CurrencyService {
                 .orElse(null);
     }
 
-    private void updateDatabaseRates(List<Pair<LbCurrencyDto, LbCurrencyExchangeRateDto>> pairedData, List<CurrencyRateAgainstEuro> dbRates) {
+    private void updateDatabaseRates(
+            List<Pair<LbCurrencyDto, LbCurrencyExchangeRateDto>> pairedData, List<CurrencyRateAgainstEuro> dbRates) {
         pairedData.forEach(pair -> {
             LbCurrencyDto currency = pair.getFirst();
             CurrencyRateAgainstEuro dbRate = dbRates.stream()

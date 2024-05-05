@@ -2,6 +2,7 @@ package me.krsmll.exchange.currency.mapper;
 
 import dto.LbCurrencyDto;
 import dto.LbCurrencyExchangeRateDto;
+import java.math.BigDecimal;
 import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
 import me.krsmll.exchange.currency.dto.CurrencyDto;
 import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
@@ -9,8 +10,6 @@ import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.math.BigDecimal;
 
 @Component
 public class CurrencyMapper {
@@ -32,10 +31,11 @@ public class CurrencyMapper {
         LbCurrencyDto currency = pair.getFirst();
         LbCurrencyExchangeRateDto rate = pair.getSecond();
         String englishName = currency.getEnglishName()
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.INTERNAL_SERVER_ERROR,
                         String.format("English name for currency %s not found", currency.getCode())));
 
-        return new CurrencyRateAgainstEuro(null, currency.getCode(), englishName, rate.getRate(),
-                currency.getCurrencyMinorUnits(), null, null);
+        return new CurrencyRateAgainstEuro(
+                null, currency.getCode(), englishName, rate.getRate(), currency.getCurrencyMinorUnits(), null, null);
     }
 }

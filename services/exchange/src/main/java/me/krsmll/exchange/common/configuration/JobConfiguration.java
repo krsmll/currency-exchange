@@ -1,12 +1,11 @@
 package me.krsmll.exchange.common.configuration;
 
+import java.util.List;
 import me.krsmll.exchange.currency.job.CurrencyDataFetchingJob;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
-
-import java.util.List;
 
 @Configuration
 public class JobConfiguration {
@@ -50,5 +49,3 @@ public class JobConfiguration {
         return scheduler;
     }
 }
-
-
