@@ -1,11 +1,10 @@
 package dto;
 
-import lombok.Setter;
-
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 import java.util.List;
 import java.util.Optional;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import lombok.Setter;
 
 @Setter
 @XmlType(propOrder = {"code", "currencyNames", "currencyNumber", "currencyMinorUnits"})

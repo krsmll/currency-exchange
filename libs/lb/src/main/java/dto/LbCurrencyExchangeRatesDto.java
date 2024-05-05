@@ -1,9 +1,8 @@
 package dto;
 
-import lombok.Setter;
-
-import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
+import javax.xml.bind.annotation.XmlElement;
+import lombok.Setter;
 
 @Setter
 public class LbCurrencyExchangeRatesDto {

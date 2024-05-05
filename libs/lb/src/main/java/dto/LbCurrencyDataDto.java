@@ -1,9 +1,8 @@
 package dto;
 
-import lombok.Setter;
-
-import javax.xml.bind.annotation.*;
 import java.util.List;
+import javax.xml.bind.annotation.*;
+import lombok.Setter;
 
 @Setter
 @XmlRootElement(name = "CcyTbl")

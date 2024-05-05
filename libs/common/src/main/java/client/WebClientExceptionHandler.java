@@ -1,4 +1,3 @@
 package client;
 
-public class WebClientExceptionHandler {
-}
+public class WebClientExceptionHandler {}

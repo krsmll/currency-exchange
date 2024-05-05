@@ -1,9 +1,8 @@
 package dto;
 
-import lombok.Data;
-
-import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlElement;
+import lombok.Data;
 
 @Data
 public class LbCurrencyExchangeRateDto {
