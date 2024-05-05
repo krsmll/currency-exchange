@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-currency
+      author: Kristjan Mill
+      changes:
+        - createTable:
+            tableName: currency_rate_against_euro
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: currency_code
+                  type: VARCHAR(3)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: currency_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: rate
+                  type: DECIMAL(14, 6)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: minor_units
+                  type: INT
+                  constraints:
+                      nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
