@@ -11,6 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 import me.krsmll.exchange.currency.controller.spec.CurrencyControllerSpec;
 import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
 import me.krsmll.exchange.currency.dto.CurrencyListResponse;
+import me.krsmll.exchange.currency.dto.CurrencyRateHistoryResponse;
 import me.krsmll.exchange.currency.service.CurrencyService;
 
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,7 @@ public class CurrencyController implements CurrencyControllerSpec {
     private final Optional<CurrencyService> currencyService;
 
     @Override
+    @CrossOrigin
     @GetMapping
     public ResponseEntity<CurrencyListResponse> getCurrencies() {
         CurrencyService service = currencyService.orElseThrow(() ->
@@ -30,6 +32,17 @@ public class CurrencyController implements CurrencyControllerSpec {
     }
 
     @Override
+    @CrossOrigin
+    @GetMapping("/history")
+    public ResponseEntity<CurrencyRateHistoryResponse> getCurrencyRateHistory(
+            @RequestParam(name = "from") String fromCurrencyCode, @RequestParam(name = "to") String toCurrencyCode) {
+        CurrencyService service = currencyService.orElseThrow(() ->
+                new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Currency provider is not configured"));
+        return ResponseEntity.ok(service.getCurrencyRateHistory(fromCurrencyCode, toCurrencyCode));
+    }
+
+    @Override
+    @CrossOrigin
     @GetMapping("/exchange")
     public ResponseEntity<CurrencyConversionResultResponse> convert(
             @RequestParam(name = "from") String fromCurrencyCode,

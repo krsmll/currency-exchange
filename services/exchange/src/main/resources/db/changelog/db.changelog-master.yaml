@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: create-table-currency
+      id: create-table-toCurrency
       author: Kristjan Mill
       changes:
         - createTable:

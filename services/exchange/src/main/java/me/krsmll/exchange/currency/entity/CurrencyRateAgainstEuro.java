@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * This holds the currency rate against Euro. Every other currency rate is calculated based on this rate.
+ * This holds the toCurrency rate against Euro. Every other toCurrency rate is calculated based on this rate.
  * 1 EUR = X USD, 1 EUR = Y GBP, 1 EUR = Z JPY, etc.
  */
 @Data

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateHistoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateNodeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/common/src/main/java/me/krsmll/libs/common/client/WebClientExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common/src/main/java/me/krsmll/libs/common/client/WebClientExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/client/LbWebClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/client/LbWebClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeRatesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeRatesDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/WebClientConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/CurrencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/entity/CurrencyRateAgainstEuro.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/entity/CurrencyRateAgainstEuro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/mapper/CurrencyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/mapper/CurrencyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyServiceLb.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyServiceLb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="fl8oo9c2" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2g6WEJ02794sR7eqUra2sy7Gj4G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ExchangeApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/kris/IdeaProjects/task",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ExchangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="exchange" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="me.krsmll.exchange.ExchangeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="" />
+      <created>1715018394800</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715018394800</updated>
+      <workItem from="1715018395818" duration="15370000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

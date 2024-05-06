@@ -21,10 +21,12 @@ public class WebClientConfiguration {
 
     @Bean
     public WebClient LbWebClient() {
+        int size = 16 * 1024 * 1024;
         return WebClient.builder()
                 .baseUrl(lbUrl)
                 .codecs(configurer -> configurer.defaultCodecs().jaxb2Decoder(new Jaxb2XmlDecoder()))
                 .codecs(configurer -> configurer.defaultCodecs().jaxb2Encoder(new Jaxb2XmlEncoder()))
+                .codecs(configurer -> configurer.defaultCodecs().maxInMemorySize(size))
                 .defaultHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE)
                 .build();
     }
