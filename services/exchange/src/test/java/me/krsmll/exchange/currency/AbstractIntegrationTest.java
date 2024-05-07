@@ -1,43 +1,43 @@
 package me.krsmll.exchange.currency;
 
+import me.krsmll.exchange.currency.entity.CurrencyRateAgainstEuro;
+import me.krsmll.exchange.currency.repository.CurrencyRepository;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.TestInstance;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.client.WireMock;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
+import java.math.BigDecimal;
+import java.util.List;
+
 
 @SpringBootTest
 @DirtiesContext
 @AutoConfigureMockMvc
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public abstract class AbstractIntegrationTest {
-    protected static final String LB_CURRENCY_DATA_ENDPOINT = "/webservices/FxRates/FxRates.asmx/getCurrencyList";
-    protected static final String LB_EXCHANGE_RATE_ENDPOINT = "/webservices/FxRates/FxRates.asmx/getCurrentFxRates";
-    protected static final String LB_EXCHANGE_RATE_FOR_SPECIFIED_DATES_ENDPOINT =
-            "/webservices/FxRates/FxRates.asmx/getFxRatesForCurrency";
-    public static final WireMockServer wireMockServer = new WireMockServer();
+    public final WireMockServer wireMockServer = new WireMockServer();
+
+    @Autowired
+    private CurrencyRepository currencyRepository;
 
     @BeforeAll
-    public static void setup() {
-        wireMockServer.stubFor(WireMock.get(urlPathEqualTo(LB_CURRENCY_DATA_ENDPOINT))
-                .willReturn(aResponse()
-                        .withStatus(200)
-                        .withHeader("Content-Type", "text/xml")
-                        .withBodyFile("LbCurrencyDataResponse.xml")));
-        wireMockServer.stubFor(WireMock.get(urlPathEqualTo(LB_EXCHANGE_RATE_ENDPOINT))
-                .willReturn(aResponse()
-                        .withStatus(200)
-                        .withHeader("Content-Type", "text/xml")
-                        .withBodyFile("LbCurrencyLatestRatesResponse.xml")));
+    public void setup() {
+        CurrencyRateAgainstEuro aud = new CurrencyRateAgainstEuro(null, "AUD", "Australian dollar", BigDecimal.valueOf(1.6297), 2, null, null);
+        CurrencyRateAgainstEuro eur = new CurrencyRateAgainstEuro(null, "EUR", "Euro", BigDecimal.valueOf(1.0), 2, null, null);
+        CurrencyRateAgainstEuro usd = new CurrencyRateAgainstEuro(null, "USD", "US dollar", BigDecimal.valueOf(1.0766), 2, null, null);
+        currencyRepository.saveAll(List.of(aud, eur, usd));
+
         wireMockServer.start();
     }
 
     @AfterAll
-    public static void teardown() {
+    public void teardown() {
         wireMockServer.stop();
     }
 }

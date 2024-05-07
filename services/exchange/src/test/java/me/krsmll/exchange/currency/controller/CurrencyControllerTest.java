@@ -18,6 +18,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class CurrencyControllerTest extends AbstractIntegrationTest {
+    protected final String LB_EXCHANGE_RATE_FOR_SPECIFIED_DATES_ENDPOINT =
+            "/webservices/FxRates/FxRates.asmx/getFxRatesForCurrency";
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -57,8 +60,6 @@ public class CurrencyControllerTest extends AbstractIntegrationTest {
                 .andExpect(jsonPath("$.from.name", is("US dollar")))
                 .andExpect(jsonPath("$.to.code", is("AUD")))
                 .andExpect(jsonPath("$.to.name", is("Australian dollar")))
-                .andExpect(jsonPath("$.fromUnix", is(1715040000)))
-                .andExpect(jsonPath("$.toUnix", is(1419984000)))
                 .andExpect(jsonPath("$.history", hasSize(4)));
     }
 

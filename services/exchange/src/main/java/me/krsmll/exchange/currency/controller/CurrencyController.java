@@ -3,6 +3,7 @@ package me.krsmll.exchange.currency.controller;
 import java.math.BigDecimal;
 import java.util.Optional;
 
+import me.krsmll.exchange.currency.dto.CurrencyDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
