@@ -7,13 +7,6 @@
     <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyConversionResultResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyConversionResultResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateHistoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateHistoryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateNodeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateNodeDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +265,7 @@
       <workItem from="1715018395818" duration="15451000" />
       <workItem from="1715079350905" duration="4523000" />
       <workItem from="1715091649652" duration="27434000" />
-      <workItem from="1715124051936" duration="2081000" />
+      <workItem from="1715124051936" duration="2249000" />
     </task>
     <servers />
   </component>

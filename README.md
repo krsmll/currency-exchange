@@ -3,6 +3,7 @@
 ### Author: Kristjan Mill
 
 ## Stack:
+- Monorepo for backend services
 - Java 17
 - Angular 17
 - Spring Boot
@@ -34,4 +35,10 @@ You need to have maven installed on your machine.
 
 or
 > mvn test
+
+
+## What could be improved:
+- Add more tests
+- Add logging
+- Use Kubernetes, Helm for deployment but it's an overkill for a project of this size
 
