@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/JobConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/JobConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/CurrencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/AbstractIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/AbstractIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/controller/CurrencyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/controller/CurrencyControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/test/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,7 +262,7 @@
       <updated>1715018394800</updated>
       <workItem from="1715018395818" duration="15451000" />
       <workItem from="1715079350905" duration="4523000" />
-      <workItem from="1715091649652" duration="25157000" />
+      <workItem from="1715091649652" duration="25509000" />
     </task>
     <servers />
   </component>
