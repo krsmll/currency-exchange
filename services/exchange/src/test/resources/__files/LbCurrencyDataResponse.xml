@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CcyTbl xmlns="http://www.lb.lt/WebServices/FxRates">
+<CcyNtry>
+    <Ccy>AUD</Ccy>
+    <CcyNm lang="LT">Australijos doleris</CcyNm>
+    <CcyNm lang="EN">Australian dollar</CcyNm>
+    <CcyNbr>036</CcyNbr>
+    <CcyMnrUnts>2</CcyMnrUnts>
+</CcyNtry>
+<CcyNtry>
+    <Ccy>EUR</Ccy>
+    <CcyNm lang="LT">Euras</CcyNm>
+    <CcyNm lang="EN">Euro</CcyNm>
+    <CcyNbr>978</CcyNbr>
+    <CcyMnrUnts>2</CcyMnrUnts>
+</CcyNtry>
+<CcyNtry>
+    <Ccy>USD</Ccy>
+    <CcyNm lang="LT">JAV doleris</CcyNm>
+    <CcyNm lang="EN">US dollar</CcyNm>
+    <CcyNbr>840</CcyNbr>
+    <CcyMnrUnts>2</CcyMnrUnts>
+</CcyNtry>
+</CcyTbl>

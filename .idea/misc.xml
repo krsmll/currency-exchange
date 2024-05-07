@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/currency/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/services/exchange/pom.xml" />
+        <option value="$PROJECT_DIR$/libs/common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

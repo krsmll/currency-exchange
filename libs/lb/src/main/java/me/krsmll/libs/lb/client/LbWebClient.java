@@ -14,8 +14,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class LbWebClient {
-    private static final String EXCHANGE_RATE_ENDPOINT = "/webservices/FxRates/FxRates.asmx/getCurrentFxRates";
-    private static final String EXCHANGE_RATE_FOR_SPECIFIED_DATES_ENDPOINT =
+    private final String EXCHANGE_RATE_ENDPOINT = "/webservices/FxRates/FxRates.asmx/getCurrentFxRates";
+    private final String EXCHANGE_RATE_FOR_SPECIFIED_DATES_ENDPOINT =
             "/webservices/FxRates/FxRates.asmx/getFxRatesForCurrency";
     private static final String CURRENCY_ENDPOINT = "/webservices/FxRates/FxRates.asmx/getCurrencyList";
 

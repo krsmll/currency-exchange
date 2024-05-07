@@ -5,15 +5,12 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ResponseStatusException;
 
 import me.krsmll.exchange.currency.dto.CurrencyConversionResultResponse;
@@ -41,10 +38,8 @@ public class CurrencyServiceLb implements CurrencyService {
     private final CurrencyMapper currencyMapper;
 
     public CurrencyServiceLb(
-            @Qualifier("LbWebClient") WebClient lbWebClient,
-            CurrencyRepository currencyRepository,
-            CurrencyMapper currencyMapper) {
-        this.lbWebClient = new LbWebClient(lbWebClient);
+            LbWebClient lbWebClient, CurrencyRepository currencyRepository, CurrencyMapper currencyMapper) {
+        this.lbWebClient = lbWebClient;
         this.currencyRepository = currencyRepository;
         this.currencyMapper = currencyMapper;
     }
@@ -90,6 +85,10 @@ public class CurrencyServiceLb implements CurrencyService {
 
     @Override
     public CurrencyConversionResultResponse convert(String fromCurrencyCode, String toCurrencyCode, BigDecimal amount) {
+        if (amount.compareTo(BigDecimal.ZERO) < 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Amount must be greater than zero");
+        }
+
         CurrencyRateAgainstEuro fromCurrency = findCurrencyByCode(fromCurrencyCode);
         CurrencyRateAgainstEuro toCurrency = findCurrencyByCode(toCurrencyCode);
 
@@ -140,31 +139,27 @@ public class CurrencyServiceLb implements CurrencyService {
         fromStack.addAll(fromCurrencyExchangeRateHistory);
         toStack.addAll(toCurrencyExchangeRateHistory);
 
-        LbCurrencyExchangeRatesDto fromRate = fromStack.pop();
-        LbCurrencyExchangeRatesDto toRate = toStack.pop();
-        DateTimeFormatter parser = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LbCurrencyExchangeRatesDto fromRate = null;
+        LbCurrencyExchangeRatesDto toRate = null;
+
         while (!fromStack.isEmpty() && !toStack.isEmpty()) {
+            if (fromRate == null) fromRate = fromStack.pop();
+            if (toRate == null) toRate = toStack.pop();
+
             Long fromDate = LocalDate.parse(fromRate.getDate()).toEpochSecond(LocalTime.MIDNIGHT, ZoneOffset.UTC);
-            Long toDate = LocalDate.parse(toRate.getDate(), parser).toEpochSecond(LocalTime.MIDNIGHT, ZoneOffset.UTC);
+            Long toDate = LocalDate.parse(toRate.getDate()).toEpochSecond(LocalTime.MIDNIGHT, ZoneOffset.UTC);
+
             if (fromDate.equals(toDate)) {
-                CurrencyRateNodeDto newToRate = new CurrencyRateNodeDto(
+                adjustedRates.add(new CurrencyRateNodeDto(
                         fromDate,
                         fromRate.getDate(),
-                        calculateConversionRate(fromRate.getCurrencyRate(), toRate.getCurrencyRate()));
-
-                adjustedRates.add(newToRate);
-                fromRate = fromStack.pop();
-                toRate = toStack.pop();
+                        calculateConversionRate(fromRate.getCurrencyRate(), toRate.getCurrencyRate())));
+                fromRate = null;
+                toRate = null;
             } else if (fromDate.compareTo(toDate) > 0) {
-                fromStack.pop();
-                if (!fromStack.isEmpty()) {
-                    fromRate = fromStack.pop();
-                }
+                toRate = null;
             } else {
-                toStack.pop();
-                if (!toStack.isEmpty()) {
-                    toRate = toStack.pop();
-                }
+                fromRate = null;
             }
         }
 

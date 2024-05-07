@@ -5,27 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/exchange/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateHistoryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateNodeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/common/src/main/java/me/krsmll/libs/common/client/WebClientExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/common/src/main/java/me/krsmll/libs/common/client/WebClientExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/lb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/AbstractIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/controller/CurrencyControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/currency/service/CurrencyServiceLbTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/resources/__files/LbCurrencyDataResponse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/resources/__files/LbCurrencyLatestRatesResponse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/resources/__files/LbCurrencyRatesForDatesAudResponse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/resources/__files/LbCurrencyRatesForDatesUsdResponse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/exchange/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/client/LbWebClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/client/LbWebClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyDataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyDataDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeDataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeDataDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeRateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeRateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeRatesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyExchangeRatesDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libs/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyNameData.java" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lb/src/main/java/me/krsmll/libs/lb/dto/LbCurrencyNameData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/JobConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/JobConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/WebClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/common/configuration/WebClientConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/CurrencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/entity/CurrencyRateAgainstEuro.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/entity/CurrencyRateAgainstEuro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/mapper/CurrencyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/mapper/CurrencyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyServiceLb.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyServiceLb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/test/java/me/krsmll/exchange/ExchangeApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +48,13 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="fl8oo9c2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2g6WEJ02794sR7eqUra2sy7Gj4G" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,31 +62,132 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ControllerIntegrationTests.getCurrencies.executor": "Run",
+    "JUnit.CurrencyControllerTest.convert.executor": "Run",
+    "JUnit.CurrencyControllerTest.convertWithInvalidAmount.executor": "Run",
+    "JUnit.CurrencyControllerTest.convertWithInvalidCurrency.executor": "Run",
+    "JUnit.CurrencyControllerTest.executor": "Run",
+    "JUnit.CurrencyControllerTest.getCurrencies.executor": "Run",
+    "JUnit.CurrencyControllerTest.getCurrencyRateHistory.executor": "Run",
+    "JUnit.CurrencyControllerTest.testGetCurrencies (1).executor": "Run",
+    "JUnit.CurrencyControllerTest.testGetCurrencies.executor": "Run",
+    "JUnit.CurrencyServiceLbTest.convert_success.executor": "Run",
+    "JUnit.CurrencyServiceLbTest.executor": "Run",
+    "JUnit.CurrencyServiceLbTest.getCurrencies_success.executor": "Run",
+    "JUnit.CurrencyServiceLbTest.getCurrencyRateHistory_success.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ExchangeApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/kris/IdeaProjects/task",
+    "last_opened_file_path": "/home/kris/IdeaProjects/task/services/exchange/src/test/resources/__files",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "org.rust.first.attach.projects": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.26365796",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services/exchange/src/test/resources/__files" />
+      <recent name="$PROJECT_DIR$/services/exchange/src/test/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="me.krsmll.exchange" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ExchangeApplication">
+    <configuration name="CurrencyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exchange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.krsmll.exchange.currency.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.controller" />
+      <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.controller.CurrencyControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyServiceLbTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exchange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.krsmll.exchange.currency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.service" />
+      <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.service.CurrencyServiceLbTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyServiceLbTest.convert_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exchange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.krsmll.exchange.currency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.service" />
+      <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.service.CurrencyServiceLbTest" />
+      <option name="METHOD_NAME" value="convert_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyServiceLbTest.getCurrencies_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exchange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.krsmll.exchange.currency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.service" />
+      <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.service.CurrencyServiceLbTest" />
+      <option name="METHOD_NAME" value="getCurrencies_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CurrencyServiceLbTest.getCurrencyRateHistory_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="exchange" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.krsmll.exchange.currency.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.service" />
+      <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.service.CurrencyServiceLbTest" />
+      <option name="METHOD_NAME" value="getCurrencyRateHistory_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExchangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="exchange" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="me.krsmll.exchange.ExchangeApplication" />
@@ -88,6 +195,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CurrencyServiceLbTest" />
+        <item itemvalue="JUnit.CurrencyControllerTest" />
+        <item itemvalue="JUnit.CurrencyServiceLbTest.getCurrencyRateHistory_success" />
+        <item itemvalue="JUnit.CurrencyServiceLbTest.convert_success" />
+        <item itemvalue="JUnit.CurrencyServiceLbTest.getCurrencies_success" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -108,11 +224,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715018394800</updated>
-      <workItem from="1715018395818" duration="15370000" />
+      <workItem from="1715018395818" duration="15451000" />
+      <workItem from="1715079350905" duration="4523000" />
+      <workItem from="1715091649652" duration="20473000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyServiceLb.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/service/CurrencyServiceLb.java</url>
+          <line>176</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

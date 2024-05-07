@@ -3,12 +3,14 @@ package me.krsmll.exchange.common.configuration;
 import java.util.List;
 
 import org.quartz.*;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 import me.krsmll.exchange.currency.job.CurrencyDataFetchingJob;
 
+@ConditionalOnProperty(value = "scheduling.enabled", havingValue = "true", matchIfMissing = true)
 @Configuration
 public class JobConfiguration {
     @Bean

@@ -7,9 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class LbCurrencyExchangeRatesDto {
     private String type;
     private String date;

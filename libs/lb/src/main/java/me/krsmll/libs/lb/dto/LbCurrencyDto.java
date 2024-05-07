@@ -5,14 +5,18 @@ import java.util.Optional;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @XmlType(propOrder = {"code", "currencyNames", "currencyNumber", "currencyMinorUnits"})
 public class LbCurrencyDto {
     private String code;
     private List<LbCurrencyNameData> currencyNames;
-    private String currencyNumber;
+    private Integer currencyNumber;
     private Integer currencyMinorUnits;
 
     @XmlElement(name = "Ccy")
@@ -26,7 +30,7 @@ public class LbCurrencyDto {
     }
 
     @XmlElement(name = "CcyNbr")
-    public String getCurrencyNumber() {
+    public Integer getCurrencyNumber() {
         return currencyNumber;
     }
 
