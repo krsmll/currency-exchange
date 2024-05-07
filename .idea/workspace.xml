@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="" />
+    <list default="true" id="413f366d-6c9c-4aa4-8779-16ba4a83840b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/controller/spec/CurrencyControllerSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyConversionResultResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyConversionResultResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateHistoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateHistoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateNodeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/exchange/src/main/java/me/krsmll/exchange/currency/dto/CurrencyRateNodeDto.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,50 +56,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ControllerIntegrationTests.getCurrencies.executor": "Run",
-    "JUnit.CurrencyControllerTest.convert.executor": "Run",
-    "JUnit.CurrencyControllerTest.convertWithInvalidAmount.executor": "Run",
-    "JUnit.CurrencyControllerTest.convertWithInvalidCurrency.executor": "Run",
-    "JUnit.CurrencyControllerTest.executor": "Run",
-    "JUnit.CurrencyControllerTest.getCurrencies.executor": "Run",
-    "JUnit.CurrencyControllerTest.getCurrencyRateHistory.executor": "Run",
-    "JUnit.CurrencyControllerTest.testGetCurrencies (1).executor": "Run",
-    "JUnit.CurrencyControllerTest.testGetCurrencies.executor": "Run",
-    "JUnit.CurrencyServiceLbTest.convert_success.executor": "Run",
-    "JUnit.CurrencyServiceLbTest.executor": "Run",
-    "JUnit.CurrencyServiceLbTest.getCurrencies_success.executor": "Run",
-    "JUnit.CurrencyServiceLbTest.getCurrencyRateHistory_success.executor": "Debug",
-    "Maven.task [test].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ExchangeApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/kris/IdeaProjects/task/services/exchange/src/test/resources/__files",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.first.attach.projects": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.26365796",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.exchange/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ControllerIntegrationTests.getCurrencies.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.convert.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.convertWithInvalidAmount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.convertWithInvalidCurrency.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.getCurrencies.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.getCurrencyRateHistory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.testGetCurrencies (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyControllerTest.testGetCurrencies.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyServiceLbTest.convert_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyServiceLbTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyServiceLbTest.getCurrencies_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CurrencyServiceLbTest.getCurrencyRateHistory_success.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.task [test].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ExchangeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kris/Desktop/seb-task&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.26365796&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -105,7 +116,7 @@
       <recent name="me.krsmll.exchange" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CurrencyControllerTest">
+  <component name="RunManager" selected="Spring Boot.ExchangeApplication">
     <configuration name="CurrencyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="exchange" />
       <extension name="coverage">
@@ -149,22 +160,6 @@
       <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.service" />
       <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.service.CurrencyServiceLbTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CurrencyServiceLbTest.convert_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="exchange" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="me.krsmll.exchange.currency.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="me.krsmll.exchange.currency.service" />
-      <option name="MAIN_CLASS_NAME" value="me.krsmll.exchange.currency.service.CurrencyServiceLbTest" />
-      <option name="METHOD_NAME" value="convert_success" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,22 +217,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="exchange/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="services/exchange/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.exchange/Dockerfile" />
       <item itemvalue="JUnit.CurrencyControllerTest.getCurrencies" />
       <item itemvalue="JUnit.CurrencyControllerTest" />
       <item itemvalue="JUnit.CurrencyServiceLbTest" />
-      <item itemvalue="JUnit.CurrencyServiceLbTest.convert_success" />
       <item itemvalue="JUnit.CurrencyServiceLbTest.getCurrencyRateHistory_success" />
       <item itemvalue="Maven.task [test]" />
       <item itemvalue="Spring Boot.ExchangeApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.exchange/Dockerfile" />
         <item itemvalue="JUnit.CurrencyControllerTest" />
         <item itemvalue="JUnit.CurrencyControllerTest.getCurrencies" />
         <item itemvalue="JUnit.CurrencyServiceLbTest" />
         <item itemvalue="JUnit.CurrencyServiceLbTest.getCurrencyRateHistory_success" />
-        <item itemvalue="JUnit.CurrencyServiceLbTest.convert_success" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +271,8 @@
       <updated>1715018394800</updated>
       <workItem from="1715018395818" duration="15451000" />
       <workItem from="1715079350905" duration="4523000" />
-      <workItem from="1715091649652" duration="25509000" />
+      <workItem from="1715091649652" duration="27434000" />
+      <workItem from="1715124051936" duration="2081000" />
     </task>
     <servers />
   </component>
