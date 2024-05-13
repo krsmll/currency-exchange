@@ -1,40 +1,40 @@
 # Currency Exchange Homework for SEB
 
-### Author: Kristjan Mill
-
-## Stack:
-- Monorepo for backend services
-- Java 17
-- Angular 17
-- Spring Boot
-- H2
-- Docker
-- Docker Compose
-- JUnit
-- Wiremock
-- Mockito
-- Swagger
-- Lombok
-- Spotless
-
 
 ## Installation:
 You need to have docker and docker-compose installed on your machine.
-> docker-compose up
+
+1. Clone this repo.
+2. Clone https://github.com/krsmll/currency-exchange-angular.
+3. Create this file in the same directory you cloned these repos to.
+```yaml
+version: '3.8'
+
+services:
+  backend:
+    build: ./currency-exchange/services/exchange
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./currency-exchange-angular
+    ports:
+      - "4200:4200"
+```
+4. Run `docker-compose up`
 
 That's it. Backend is running on port 8080 and frontend on port 4200.
 
 Access them at `http://localhost:8080` and `http://localhost:4200` respectively.
 
 ## Swagger:
-Swagger is available at `http://localhost:8080/api/v1/swagger-ui/index.html`
+Swagger is available at `/api/v1/swagger-ui/index.html`
 
 ## Running tests:
 You need to have maven installed on your machine.
-> mvn clean test
-
+```mvn clean test```
 or
-> mvn test
+```mvn test```
 
 
 ## What could be improved:
